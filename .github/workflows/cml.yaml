@@ -23,7 +23,7 @@ jobs:
           docker-machine create \
             --driver amazonec2 \
             --amazonec2-instance-type g3s.xlarge \
-            --amazonec2-vpc-id vpc-76f1f01e \
+            --amazonec2-vpc-id vpc-a3890fc8 \
             --amazonec2-region us-east-2 \
             --amazonec2-zone a \
             --amazonec2-ssh-user ubuntu \
