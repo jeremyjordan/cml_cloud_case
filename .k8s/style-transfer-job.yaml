@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: style-transfer-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: dvc-pipeline
+        image: ghcr.io/jeremyjordan/dvc-demo:0.1
+        env:
+          - name: repo_token
+            valueFrom:
+              secretKeyRef:
+                name: repo-token-secret
+                key: repo_token
+      restartPolicy: Never
+  backoffLimit: 4
