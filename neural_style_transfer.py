@@ -258,7 +258,7 @@ with open("metrics.txt", "w") as outfile:
     outfile.write(df.to_markdown())
 
 # Make a table of GPU info
-g = nvgpu.gpu_info()
-df = pd.DataFrame.from_dict(g[0], orient="index", columns=["Value"])
-with open("gpu_info.txt", "w") as outfile:
-    outfile.write(df.to_markdown())
+# g = nvgpu.gpu_info()
+# df = pd.DataFrame.from_dict(g[0], orient="index", columns=["Value"])
+# with open("gpu_info.txt", "w") as outfile:
+#     outfile.write(df.to_markdown())
